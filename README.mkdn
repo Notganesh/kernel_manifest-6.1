@@ -33,6 +33,7 @@ ln -s kernel_device_modules-6.1 kernel_device_modules
 ```
 mkdir -p kernel_device_modules-6.1/kernel/configs/ext_config
 ```
+```
 cp -r kernel_device_modules-6.1/arch/arm64/configs/ext_config/moto-mgk_64_k61-scout.config \
    kernel_device_modules-6.1/kernel/configs/ext_config/moto-mgk_64_k61-scout.config
 ```
