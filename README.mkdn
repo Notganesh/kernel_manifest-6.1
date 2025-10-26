@@ -1,19 +1,24 @@
 # Motorola Edge 60 Fusion (scout) kernel manifest
 - Release tag: MMI-W1VC36H.14-20-1
 - Android 16
-===========
 
 Getting started
 ---------------
 ## 1. Create folder & sync repo
+```
+mkdir -p scout
+```
+```
+cd scout
+```
 
 To initialize your local repository using the Kernel-Manifest trees, use a command like this:
 ```
-repo init -u https://github.com/Notganesh/kernel_manifest-6.1-b main
+repo init -u https://github.com/Notganesh/kernel_manifest-6.1.git -m default.xml
 ```
 Then to sync up:
 ```
-repo sync
+repo sync -j$(nproc)
 ```
 
 ## 2. Create symlinks
