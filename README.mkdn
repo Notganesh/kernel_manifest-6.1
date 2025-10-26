@@ -1,0 +1,50 @@
+# Motorola Edge 60 Fusion (scout) kernel manifest
+- Release tag: MMI-W1VC36H.14-20-1
+- Android 16
+===========
+
+Getting started
+---------------
+## 1. Create folder & sync repo
+
+To initialize your local repository using the Kernel-Manifest trees, use a command like this:
+```
+repo init -u https://github.com/Notganesh/kernel_manifest-6.1-b main
+```
+Then to sync up:
+```
+repo sync
+```
+
+## 2. Create symlinks
+```
+ln -s kernel_device_modules-6.1 kernel_device_modules-mainline
+```
+
+ln -s kernel_device_modules-6.1 kernel_device_modules
+```
+
+## 3. Copy Scout config
+```
+mkdir -p kernel_device_modules-6.1/kernel/configs/ext_config
+```
+cp -r kernel_device_modules-6.1/arch/arm64/configs/ext_config/moto-mgk_64_k61-scout.config \
+   kernel_device_modules-6.1/kernel/configs/ext_config/moto-mgk_64_k61-scout.config
+```
+## 4. Build kernel
+```
+bazel build //kernel-6.1:kernel --//:kernel_version=6.1 --//:internal_config=true
+```
+
+## 5. Build device modules
+```
+export DEFCONFIG_OVERLAYS="ext_config/moto-mgk_64_k61-scout.config"
+```
+```
+bazel build //kernel_device_modules-6.1:mgk_64_k61.user
+```
+
+## 6. Clean sources
+```
+bazel clean --expunge
+```
