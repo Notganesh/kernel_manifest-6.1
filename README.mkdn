@@ -1,4 +1,4 @@
-# Motorola Edge 60 Fusion (scout) kernel manifest
+# Motorola Edge 60 Fusion (Scout) kernel manifest
 - Release tag: MMI-W1VC36H.14-20-1
 - Android 16
 
@@ -25,7 +25,7 @@ repo sync -j$(nproc)
 ```
 ln -s kernel_device_modules-6.1 kernel_device_modules-mainline
 ```
-
+```
 ln -s kernel_device_modules-6.1 kernel_device_modules
 ```
 
