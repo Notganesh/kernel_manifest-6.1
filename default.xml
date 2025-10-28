@@ -49,7 +49,7 @@
   <project path="vendor/mediatek/kernel_modules" name="android_vendor_mediatek_kernel_modules" revision="main" remote="Notganesh" />
     
   <!-- Motorola kernel modules -->
-  <project path="motorola/kernel/modules" name="Motorola-kernel-modules" revision="W" remote="Notganesh" />
+  <project path="motorola/kernel/modules" name="Motorola-kernel_modules" revision="W" remote="Notganesh" />
   <project path="build/bazel_mgk_rules" name="kernel-build-bazel_mgk_rules" revision="MMI-V2VC35.33-132-6" remote="Notganesh">
     <linkfile src="BUILD.bazel" dest="BUILD" />
     <linkfile src="kleaf/bazel.WORKSPACE" dest="WORKSPACE" />
